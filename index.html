@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Build with Jose kits, on your own time. Seven kits, buy the one you need or the whole bundle with a self-paced video walkthrough. Launching after Nov 7.">
+<title>The Toolkit, by Build with Jose</title>
+<link rel="canonical" href="https://thejoseplatero.github.io/bwj-toolkit/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thejoseplatero.github.io/bwj-toolkit/">
+<meta property="og:title" content="The Toolkit, by Build with Jose">
+<meta property="og:description" content="Seven kits. Buy the one you need, or the whole bundle with a self-paced video walkthrough.">
+<meta property="og:site_name" content="Build with Jose">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,700;1,400&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #fcf9f6;
+  --surface-container: #f0edea;
+  --ink: #15171c;
+  --ink-soft: #3d3a36;
+  --ink-mute: #6c655e;
+  --ink-10: rgba(21,23,28,0.10);
+  --ink-06: rgba(21,23,28,0.06);
+  --orange: #ff4a1c;
+  --orange-deep: #d6310a;
+  --orange-soft: #ffe4dc;
+  --paper: #ffffff;
+  --char: #1c1c1a;
+  --serif: "Literata", "Iowan Old Style", Georgia, serif;
+  --sans: "Hanken Grotesk", -apple-system, system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --max: 1040px;
+}
+* , *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: var(--surface); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+a { color: inherit; }
+
+header.top { border-bottom: 1.5px solid var(--ink); background: var(--surface); position: sticky; top: 0; z-index: 20; }
+.top-row { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; gap: 16px; flex-wrap: wrap; }
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.brand-mark { display: inline-flex; padding: 6px; border: 1.5px solid var(--ink); background: var(--paper); }
+.brand .stack { font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; line-height: 1.25; }
+.brand .stack small { display: block; font-weight: 400; color: var(--ink-mute); font-size: 10px; letter-spacing: 0.12em; }
+.back-link { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); text-decoration: none; }
+.back-link:hover { color: var(--orange); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 22px; background: var(--orange); color: #fff;
+  border: 1.5px solid var(--ink);
+  font-family: var(--mono); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  cursor: pointer; text-decoration: none;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--ink); }
+.btn.block { display: flex; width: 100%; }
+.btn.ghost { background: transparent; color: var(--ink); box-shadow: none; }
+.btn.ghost:hover { transform: none; box-shadow: none; background: var(--ink-06); }
+.btn.sm { padding: 10px 16px; font-size: 10.5px; box-shadow: 3px 3px 0 var(--ink); }
+.btn.sm:hover { box-shadow: 4px 4px 0 var(--ink); }
+
+.eyebrow {
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange);
+  display: inline-block; margin-bottom: 14px;
+}
+
+.hero { padding: 64px 0 48px; border-top: none; }
+.hero h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(32px, 5vw, 50px); line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 18px; max-width: 16ch; }
+.hero .sub { font-size: clamp(16px, 2vw, 19px); color: var(--ink-soft); max-width: 60ch; line-height: 1.55; margin: 0 0 28px; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+
+.launch-note {
+  background: var(--orange-soft); border: 1px solid var(--orange);
+  padding: 20px 24px; max-width: 720px; margin: 32px 0 0;
+  font-size: 14.5px; color: var(--ink-soft); line-height: 1.6;
+}
+.launch-note b { color: var(--ink); }
+
+section { padding: 56px 0; border-top: 1px solid var(--ink-10); }
+h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(26px, 3.5vw, 34px); letter-spacing: -0.01em; line-height: 1.15; margin: 0 0 14px; }
+section > .wrap > p.lede { font-size: 16px; line-height: 1.6; color: var(--ink-soft); max-width: 66ch; margin: 0 0 32px; }
+
+/* kit cards */
+.kit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.kit-card {
+  background: var(--paper); border: 1px solid var(--ink-10);
+  padding: 22px 22px 20px; display: flex; flex-direction: column;
+}
+.kit-card .status {
+  font-family: var(--mono); font-size: 9.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  display: inline-block; padding: 3px 8px; margin-bottom: 12px; width: fit-content;
+}
+.kit-card .status.live { background: var(--ink); color: #fff; }
+.kit-card .status.building { background: var(--surface-container); color: var(--ink-mute); border: 1px solid var(--ink-10); }
+.kit-card h3 { font-family: var(--serif); font-size: 19px; font-weight: 700; margin: 0 0 8px; }
+.kit-card p { font-size: 14px; color: var(--ink-soft); line-height: 1.55; margin: 0 0 18px; flex: 1 0 auto; }
+.kit-card .foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.kit-card .amt { font-family: var(--serif); font-weight: 700; font-size: 20px; color: var(--orange); }
+
+/* bundle */
+.bundle-box {
+  max-width: 620px; margin: 40px auto 0;
+  background: var(--paper); border: 1.5px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--orange);
+  padding: 36px 32px;
+}
+.bundle-box .flag {
+  display: inline-block; font-family: var(--mono); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; background: var(--orange); color: #fff;
+  padding: 5px 10px; margin-bottom: 16px;
+}
+.bundle-box .amt { font-family: var(--serif); font-size: 46px; font-weight: 700; color: var(--ink); line-height: 1; }
+.bundle-box .amt small { font-size: 16px; color: var(--ink-mute); font-family: var(--sans); font-weight: 400; }
+.bundle-box .save { font-family: var(--mono); font-size: 11.5px; color: var(--orange-deep); margin: 8px 0 20px; }
+.bundle-box ul { list-style: none; margin: 0 0 22px; padding: 0; }
+.bundle-box li { font-size: 14px; color: var(--ink-soft); padding: 7px 0 7px 18px; border-bottom: 1px solid var(--ink-10); position: relative; }
+.bundle-box li::before { content: "\25A0"; position: absolute; left: 0; color: var(--orange); font-size: 9px; top: 11px; }
+
+details.qa { border-bottom: 1px solid var(--ink-10); padding: 18px 0; }
+details.qa summary { font-family: var(--serif); font-weight: 700; font-size: 17px; cursor: pointer; list-style: none; }
+details.qa summary::-webkit-details-marker { display: none; }
+details.qa summary::before { content: "+"; color: var(--orange); font-weight: 700; margin-right: 10px; }
+details.qa[open] summary::before { content: "\2212"; }
+details.qa .ans { margin-top: 12px; font-size: 15px; color: var(--ink-soft); line-height: 1.6; max-width: 66ch; }
+
+.closing { text-align: center; padding: 64px 0 80px; }
+.closing h2 { max-width: 640px; margin: 0 auto 12px; }
+.closing p { max-width: 520px; margin: 0 auto 26px; color: var(--ink-soft); }
+.closing .btn { margin: 0 auto; }
+
+footer.bot { border-top: 1.5px solid var(--ink); padding: 32px 0; }
+footer.bot .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+footer.bot .fine { font-family: var(--mono); font-size: 11px; color: var(--ink-mute); }
+
+@media (max-width: 640px) {
+  .hero { padding: 44px 0 36px; }
+  section { padding: 40px 0; }
+  .bundle-box { padding: 28px 22px; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="/" aria-label="The Toolkit home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 11 11" shape-rendering="crispEdges" aria-hidden="true">
+          <rect width="11" height="11" fill="transparent"/>
+          <g fill="#15171c">
+            <rect x="1" y="1" width="2" height="2"/><rect x="3" y="1" width="2" height="2"/><rect x="5" y="1" width="2" height="2"/>
+            <rect x="1" y="3" width="2" height="2"/><rect x="7" y="3" width="2" height="2"/>
+            <rect x="1" y="5" width="2" height="2"/><rect x="3" y="5" width="2" height="2"/><rect x="5" y="5" width="2" height="2"/>
+            <rect x="1" y="7" width="2" height="2"/><rect x="7" y="7" width="2" height="2"/>
+          </g>
+          <rect x="7" y="1" width="2" height="2" fill="#ff4a1c"/>
+        </svg>
+      </span>
+      <span class="stack">The Toolkit<small>by Build with Jose</small></span>
+    </a>
+    <a class="back-link" href="https://joseplatero.com/build/">Build with Jose &rarr;</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">On your own time</span>
+    <h1>Can't make Nov 7? Build it yourself.</h1>
+    <p class="sub">The same seven kits from the full course, buy the one you actually need, or the whole bundle with a self-paced video walkthrough. No live date to catch, no seat to book.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#bundle">See the bundle &middot; $149</a>
+      <a class="btn ghost" href="#kits">Browse kits individually</a>
+    </div>
+    <div class="launch-note">
+      <b>Honest note on timing:</b> most of these kits are still being built, and the video walkthrough gets recorded from the live Nov 7 cohort. Target Employer is live today, live demos at joseplatero.com/affirm and /thomsonreuters. Everything else ships through the fall as it is finished. Join the list below and I will email you the moment each one is ready, real dates, not a countdown timer.
+    </div>
+  </div>
+</section>
+
+<section id="kits" aria-label="The kits">
+  <div class="wrap">
+    <span class="eyebrow">Buy what you need</span>
+    <h2>Seven kits. One system.</h2>
+    <p class="lede">Each one is a Claude Code skill you drop in and run against your own real situation. Not a template you fill out alone, a working example you make yours.</p>
+    <div class="kit-grid">
+
+      <article class="kit-card">
+        <span class="status live">Live now</span>
+        <h3>Target Employer</h3>
+        <p>Give it a job posting and your resume. It builds a page that pitches you for that exact role, in the company's own brand. Live demos already up.</p>
+        <div class="foot"><span class="amt">$29</span><a class="btn sm" href="#">Get it</a></div>
+      </article>
+
+      <article class="kit-card">
+        <span class="status building">Building</span>
+        <h3>Targeting Kit</h3>
+        <p>The triangulation exercise: what you are good at, what you want, where the market is hiring for that overlap. Drafts your target company list.</p>
+        <div class="foot"><span class="amt">$29</span><a class="btn sm ghost" href="#">Notify me</a></div>
+      </article>
+
+      <article class="kit-card">
+        <span class="status building">Building</span>
+        <h3>Voice &amp; Tone</h3>
+        <p>Captures your writing voice from real samples, then drafts LinkedIn posts that sound like you, not like AI wrote them.</p>
+        <div class="foot"><span class="amt">$29</span><a class="btn sm ghost" href="#">Notify me</a></div>
+      </article>
+
+      <article class="kit-card">
+        <span class="status building">Building</span>
+        <h3>Warm Circle</h3>
+        <p>Remembers people properly. Who they are, what they care about, what you last talked about, and a nudge when it is time to be useful again.</p>
+        <div class="foot"><span class="amt">$29</span><a class="btn sm ghost" href="#">Notify me</a></div>
+      </article>
+
+      <article class="kit-card">
+        <span class="status building">Building</span>
+        <h3>Interviewer Profiler</h3>
+        <p>Give it the job posting and the interviewer's LinkedIn. It builds a persona of what that person judges, plus a prep guide for that exact room.</p>
+        <div class="foot"><span class="amt">$29</span><a class="btn sm ghost" href="#">Notify me</a></div>
+      </article>
+
+      <article class="kit-card">
+        <span class="status building">Building</span>
+        <h3>Resume Formats</h3>
+        <p>The specificity, never inflation rewrite system. Turns modest, blurry bullet points into the exact contribution a hiring manager can recognize.</p>
+        <div class="foot"><span class="amt">$29</span><a class="btn sm ghost" href="#">Notify me</a></div>
+      </article>
+
+      <article class="kit-card">
+        <span class="status building">Building</span>
+        <h3>Offer Coach</h3>
+        <p>Reads your whole offer package: base, bonus, equity, vacation, start date. Drafts your reply and rehearses the negotiation call with you.</p>
+        <div class="foot"><span class="amt">$29</span><a class="btn sm ghost" href="#">Notify me</a></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="bundle" aria-label="The bundle">
+  <div class="wrap">
+    <span class="eyebrow">The better deal</span>
+    <h2>All seven, plus the full walkthrough.</h2>
+    <p class="lede">Buying all seven kits separately runs $203. The bundle is less than that and adds the one thing kits alone do not give you: seeing the whole system run start to finish.</p>
+    <div class="bundle-box">
+      <span class="flag">Everything</span>
+      <div class="amt">$149 <small>one time</small></div>
+      <div class="save">Save $54 versus buying the seven kits separately</div>
+      <ul>
+        <li>All seven kits, yours to keep</li>
+        <li>Self-paced video walkthrough of the full Nov 7 day, recorded from the live cohort</li>
+        <li>The same curriculum as the live course: Aim, Get Found, Get Answered, Connect, Interviews</li>
+        <li>No live Q&amp;A and no seat in the room, that stays exclusive to Nov 7</li>
+      </ul>
+      <a class="btn block" href="#">Join the list for $149</a>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Common questions">
+  <div class="wrap">
+    <span class="eyebrow">Common questions</span>
+    <details class="qa" open>
+      <summary>How is this different from the live Nov 7 course?</summary>
+      <div class="ans">Nov 7 is live, in person, 30 seats, and I look at every build in the room. The Toolkit is the same content, kits and a recorded walkthrough, on your own schedule, without live feedback. If you want the personal attention, Nov 7 is worth the difference. If you want the system on your own time, this is built for that.</div>
+    </details>
+    <details class="qa">
+      <summary>Why buy a kit that is not built yet?</summary>
+      <div class="ans">You are not buying a kit that does not exist. Joining the list costs nothing and reserves the launch price before anything ships. You only pay when the kit or bundle you want is actually live.</div>
+    </details>
+    <details class="qa">
+      <summary>Do I need to know how to code?</summary>
+      <div class="ans">No. Each kit is a Claude Code skill. You will need a laptop and a Claude account with a paid plan, about $20 USD a month. Setup instructions come with every kit.</div>
+    </details>
+  </div>
+</section>
+
+<section class="closing" aria-label="Join the list">
+  <div class="wrap">
+    <h2>Get notified the moment a kit ships.</h2>
+    <p>No spam, no countdown timers. Real emails when real things are ready, starting with whichever kit you are waiting on.</p>
+    <a class="btn" href="https://loopsandletters.substack.com/subscribe" target="_blank" rel="noopener">Join the list</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="bot">
+  <div class="wrap">
+    <span class="fine">The Toolkit, by Build with Jose</span>
+    <a class="back-link" href="https://joseplatero.com/build/">Build with Jose &rarr;</a>
+  </div>
+</footer>
+
+</body>
+</html>
